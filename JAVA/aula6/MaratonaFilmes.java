@@ -19,8 +19,8 @@ public class MaratonaFilmes {
 
     //=============Método calcularTempoTotal==================
 
-    public static double calcularTempoTotal(int quantidadeFilmes, double duracaoFilmes){
-        return quantidadeFilmes * duracaoFilmes;
+    public static double calcularTempoTotal(double fdouble, double duracaoFilmes){
+        return fdouble * duracaoFilmes;
     }
 
 
@@ -62,7 +62,7 @@ public class MaratonaFilmes {
         System.out.println("Digite quantas horas tem cada filme");
         duracaoFilmes = in.nextDouble();
 
-        
+        double fdouble = new Double(quantidadeFilmes);
 
         //===========CONVERSÃO=============
 
