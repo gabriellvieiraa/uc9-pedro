@@ -9,16 +9,18 @@ public class exercicio11 {
 
     }
 
-     public static void tresLinhas(){
+      public static void vinteLinhas(int contador) {
+        if (contador == 0) {
+            return; // condição de parada
+        }
         imprimelinha();
-        imprimelinha();
-        imprimelinha();
-
+        vinteLinhas(contador - 1);
     }
+
     public static void main(String[] args) {
-        System.out.println("Primeira linha");
-        tresLinhas();
-        System.out.println("Segunda linha");
+        System.out.println("Começo");
+        vinteLinhas(20);
+        System.out.println("Final");
     }
 }
     
