@@ -1,5 +1,7 @@
 package aula10;
 
+import java.util.Scanner;
+
 public class AnaliseMeteorologica {
     
     public static void calcularMediaPonderadaTemperatura(double max, double min) {
@@ -20,6 +22,8 @@ public class AnaliseMeteorologica {
         System.out.println("COMFORTAVEL");
        }else if(tempMedia < 15 && umidadeMedia < 50){
         System.out.println("FRIO E SECO");
+       }else{
+        System.out.println("Não identificado");
        }
 
 
@@ -28,20 +32,16 @@ public class AnaliseMeteorologica {
 
     public static void identificarCidadeComMaiorAmplitudeTermica(){
 
-
+       
 
 
     }
 
     public static void main(String[] args) {
 
-        int ciade1;
-        int cidade2;
-        int cidade3;
-        int cidade5;
 
 
-        String alerta = "AMARELO, VERDE, VERMELHO";
+        
 
 
         
