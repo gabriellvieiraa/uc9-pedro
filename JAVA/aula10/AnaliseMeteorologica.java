@@ -71,7 +71,7 @@ public class AnaliseMeteorologica {
        
        media1 = temperaturas [0][0] * 0.7 + temperaturas [0][1] * 0.3;
        
-       System.out.printf("%.2f\n", media1);
+       System.out.printf("%.2f\n", media1);         //"%" = indica q vai começar uma formatação de valor, ".2"= número de casas decimaias após a vírgula, "f"= significa double
 
        //cidade2 
 
@@ -119,6 +119,8 @@ public class AnaliseMeteorologica {
         }else{
             System.out.println("Não identificado");
         }
+        
+       
     }
     
 
@@ -130,7 +132,7 @@ public class AnaliseMeteorologica {
 
         double amplitude;
 
-        maiorAmplitude = temperaturas[0][0] - temperaturas[0][1];
+        maiorAmplitude = temperaturas[0][0] - temperaturas[0][1];   //Calcula a amplitude da cidade 1 e usa como valor inicial.
 
         for (int i = 1; i < temperaturas.length; i++) { //começa um loop com "for", "i" cria um contador q começa em 1 pq o índice 0 ja foi usado
                                                         // o length percorre todas posições dos vetores
@@ -141,44 +143,26 @@ public class AnaliseMeteorologica {
         maiorAmplitude = amplitude;
         indiceMaior = i;
         }
-    }
-
-
-
-        // =========== Saída =========
-
-        System.out.println("_______________________________________________________________");
-        System.out.println(" ");
-        System.out.println("Olá, bem vindo ao Sistema de Análise Meteorológica Inteligente ");
-        System.out.println("_______________________________________________________________");
-        System.out.println(" ");
 
         
-        System.out.printf("Essa são as médias de temperaturas de cada cidade: ");
-        System.out.println(" ");
-        System.out.printf("Cidade 1: %.2f\n", media1);
-        System.out.printf("Cidade 2: %.2f\n", media2);
-        System.out.printf("Cidade 3: %.2f\n", media3);
-        System.out.printf("Cidade 4: %.2f\n", media4);
-        System.out.printf("Cidade 5: %.2f\n", media5);
-
-
-        System.out.println(" ");
-        System.out.println("Classificação de cada cidade: "); 
-        System.out.println(" ");
-
-        System.out.println("Cidade 1: " + classificacao);
-        System.out.println("Cidade 2: " + classificacao);
-        System.out.println("Cidade 3: " + classificacao);
-        System.out.println("Cidade 4: " + classificacao);
-        System.out.println("Cidade 5: " + classificacao);
-
-        System.out.println(" ");
-
-        System.out.println("Cidade com maior amplitude térmica: " + (indiceMaior + 1));
-        System.out.println(" ");
+    }
     
-        }
+    
+    // =========== Saída =========
+    
+    System.out.println("==============================================================");
+    System.out.println("        SISTEMA DE ANÁLISE METEOROLÓGICA INTELIGENTE");
+    System.out.println("==============================================================");
+    
+    System.out.println();
+    System.out.println("ANÁLISE DETALHADA POR CIDADE:");
+    System.out.println("--------------------------------------------------------------");
+    
+    System.out.printf("%-6s | %-6s | %-6s | %-6s | %-6s | %-16s\n",
+    "CIDADE", "T.MAX", "T.MIN", "T.MÉD", "UMID%", "CLASSIFICAÇÃO");
+    
+    System.out.println("--------------------------------------------------------------");
+}
     }
 
 
