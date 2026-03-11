@@ -42,7 +42,7 @@ public class AnaliseMeteorologica {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  //arrays é um objeto utilizado para armazenar uma coleção ordenada de dados em uma única variável
 
         // Temperaturas: [máxima, mínima] para 5 cidades
         double[][] temperaturas = {
@@ -62,8 +62,6 @@ public class AnaliseMeteorologica {
             {75, 50, 68}   // Cidade 5
         };
 
-
-        //========== Imprimir dados ============
 
         //========== temperartura media =========
 
@@ -105,17 +103,17 @@ public class AnaliseMeteorologica {
        //========= Classificar clima ============
        
        
-       String classificacao = "QUENTE MODERADO, CONFORTAVEL, MUITO QUENTE, QUENTE LEVE, MUITO QUENTE E UMIDO";
+       String classificacao = "QUENTE MODERADO, CONFORTAVEL, MUITO QUENTE, QUENTE LEVE, MUITO QUENTE E UMIDO"; 
        
-       double tempMedia = 0;
-       int umidadeMedia = 0;
+       double tempMedia = 0;    //variável double pq é número quebrado
+       int umidadeMedia = 0;    //int pq é um número inteiro
 
-       for(int i = 0; i < 5; i++){
-       
+       for(int i = 0; i < 5; i++){      //"i" começa com um valor 0, funciona como um contador loop e funciona enquanto "i" for mnor q 5   
+                                        // "i++" a cada repetução o valor de "i" aumenta 1
        if(tempMedia > 30 && umidadeMedia > 75){
            System.out.println("MUITO QUENTE E UMIDO");;
         }else if(tempMedia >= 20 && tempMedia <= 25 && umidadeMedia >= 50 && umidadeMedia <= 70){
-            System.out.println("COMFORTAVEL");
+            System.out.println("COMFORTAVEL");  //se for verdadeiro retorna "confortável"
         }else if(tempMedia < 15 && umidadeMedia < 50){
             System.out.println("FRIO E SECO");
         }else{
@@ -123,7 +121,6 @@ public class AnaliseMeteorologica {
         }
     }
     
-
 
         //============= Amplitude =============
     
@@ -135,9 +132,10 @@ public class AnaliseMeteorologica {
 
         maiorAmplitude = temperaturas[0][0] - temperaturas[0][1];
 
-        for (int i = 1; i < temperaturas.length; i++) {
+        for (int i = 1; i < temperaturas.length; i++) { //começa um loop com "for", "i" cria um contador q começa em 1 pq o índice 0 ja foi usado
+                                                        // o length percorre todas posições dos vetores
 
-         amplitude = temperaturas[i][0] - temperaturas[i][1];
+         amplitude = temperaturas[i][0] - temperaturas[i][1]; //
 
         if (amplitude > maiorAmplitude) {
         maiorAmplitude = amplitude;
