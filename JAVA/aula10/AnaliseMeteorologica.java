@@ -39,6 +39,8 @@ public class AnaliseMeteorologica {
        media5 = temperaturas [4][0] * 0.7 + temperaturas [4][1] * 0.3;
 
        System.out.printf("%.2f\n", media5);
+
+       
         
      }
 
@@ -93,7 +95,9 @@ public class AnaliseMeteorologica {
     }
 
 
-    }
+}
+
+    //========== Main ==========
 
     public static void main(String[] args) {  //arrays é um objeto utilizado para armazenar uma coleção ordenada de dados em uma única variável
 
