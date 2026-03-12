@@ -10,37 +10,6 @@ public class AnaliseMeteorologica {
 
          double media1, media2, media3, media4, media5;
 
-       //cidade 1
-       
-       media1 = temperaturas [0][0] * 0.7 + temperaturas [0][1] * 0.3;
-       
-       System.out.printf("%.2f\n", media1);         //"%" = indica q vai começar uma formatação de valor, ".2"= número de casas decimaias após a vírgula, "f"= significa double
-
-       //cidade2 
-
-       media2 = temperaturas [1][0] * 0.7 + temperaturas [1][1] * 0.3;
-
-       System.out.printf("%.2f\n", media2);
-
-       //cidade 3
-
-       media3 = temperaturas [2][0] * 0.7 + temperaturas [2][1] * 0.3;
-
-       System.out.printf("%.2f\n", media3);
-
-       //cidade 4
-
-       media4 = temperaturas [3][0] * 0.7 + temperaturas [3][1] * 0.3;
-
-       System.out.printf("%.2f\n", media4);
-
-       //cidade 5
-
-       media5 = temperaturas [4][0] * 0.7 + temperaturas [4][1] * 0.3;
-
-       System.out.printf("%.2f\n", media5);
-
-       
         
      }
 
@@ -101,6 +70,7 @@ public class AnaliseMeteorologica {
 
     public static void main(String[] args) {  //arrays é um objeto utilizado para armazenar uma coleção ordenada de dados em uma única variável
 
+        
         // Temperaturas: [máxima, mínima] para 5 cidades
         double[][] temperaturas = {
             {32.5, 22.1},  // Cidade 1
@@ -119,6 +89,10 @@ public class AnaliseMeteorologica {
             {75, 50, 68}   // Cidade 5
         };
 
+        //chamando os métodos
+        calcularMediaPonderadaTemperatura(0, 0, temperaturas);
+        classificarClima(0, 0);
+        identificarCidadeComMaiorAmplitudeTermica(temperaturas);
 
         //========== temperartura media =========
 
@@ -159,26 +133,6 @@ public class AnaliseMeteorologica {
    
        //========= Classificar clima ============
        
-       
-       String classificacao = "QUENTE MODERADO, CONFORTAVEL, MUITO QUENTE, QUENTE LEVE, MUITO QUENTE E UMIDO"; 
-       
-       double tempMedia = 0;    //variável double pq é número quebrado
-       int umidadeMedia = 0;    //int pq é um número inteiro
-
-       for(int i = 0; i < 5; i++){      //"i" começa com um valor 0, funciona como um contador loop e funciona enquanto "i" for mnor q 5   
-                                        // "i++" a cada repetução o valor de "i" aumenta 1
-       if(tempMedia > 30 && umidadeMedia > 75){
-           System.out.println("MUITO QUENTE E UMIDO");;
-        }else if(tempMedia >= 20 && tempMedia <= 25 && umidadeMedia >= 50 && umidadeMedia <= 70){
-            System.out.println("COMFORTAVEL");  //se for verdadeiro retorna "confortável"
-        }else if(tempMedia < 15 && umidadeMedia < 50){
-            System.out.println("FRIO E SECO");
-        }else{
-            System.out.println("Não identificado");
-        }
-        
-       
-    }
     
 
         //============= Amplitude =============
@@ -204,6 +158,7 @@ public class AnaliseMeteorologica {
         
     }
     
+
     
     // =========== Saída =========
     
@@ -216,7 +171,7 @@ public class AnaliseMeteorologica {
     System.out.println("--------------------------------------------------------------");
     
     System.out.printf("%-6s | %-6s | %-6s | %-6s | %-6s | %-16s\n",     //"%-6s" = formatação da coluna, "%-16s" = quando for um texto maior na coluna
-    "CIDADE", "T.MAX", "T.MIN", "T.MÉD", "UMID%", "CLASSIFICAÇÃO");
+    "CIDADE\n1\n2\n3\n4\n5\n", "T.MAX", "T.MIN", "T.MÉD", "UMID%", "CLASSIFICAÇÃO");
     
     System.out.println("--------------------------------------------------------------");
 
