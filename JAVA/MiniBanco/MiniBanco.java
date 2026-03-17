@@ -99,8 +99,10 @@ public class MiniBanco {
                 }
 
                 //System.out.println(" [Sacar - em breve] ");
+
             }else if (opcao ==3){
-                System.out.println(" [Consultar saldo] ");
+                exibirSaldo(saldo);
+                //System.out.println(" [Consultar saldo] ");
             }else if (opcao ==4){
                 System.out.println(" [Extrato - em breve] ");
             }else if (opcao == 0){
