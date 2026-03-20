@@ -27,13 +27,13 @@ public class MiniBanco {
     }
 
     static void exibirMenu(){
-        System.out.println("\n=== MiniBanco===");
+        System.out.println("\n-----MiniBanco-----\n");
         System.out.println("1 - Depositar");
         System.out.println("2 - Sacar");
         System.out.println("3 - Consultar saldo");
         System.out.println("4 - Ver extrato");
         System.out.println("0 - sair");
-        System.out.print("Escolha: ");
+        System.out.print("Escolha uma opiçao: ");
     }
 
     static double depositar(double saldo, double valor){
@@ -49,7 +49,7 @@ public class MiniBanco {
     }
 
     static void exibirExtrato(String[] extrato, int totalLinhas){
-        System.out.println("\n----------------Extrato-------------------");
+        System.out.println("\n------------------Extrato--------------------\n");
         if (totalLinhas == 0){
             System.out.println("Nenhuma movimentação.");
         }else {
@@ -57,7 +57,7 @@ public class MiniBanco {
                 System.out.println(" " + extrato[i]);
             }
         }
-        System.out.println("------------------------------------------");
+        System.out.println("\n---------------------------------------------\n");
     }
 
     static int registrar(String[] extrato, int totalLinhas, String linha){
@@ -67,7 +67,7 @@ public class MiniBanco {
 
     public static void main(String[] args) {
 
-        System.out.println("Mini Bnaco iniciado. ");
+        System.out.println("\nMini Bnaco iniciado. \n");
 
         Scanner scanner = new Scanner(System.in);
         
@@ -80,7 +80,7 @@ public class MiniBanco {
         int opcao = -1;
 
         //boas vindas
-        System.out.print("Digite o seu nome: ");
+        System.out.print("Digite o seu primeiro nome: ");
         String nome = scanner.next();
         System.out.printf("Olá, %s! Saldo inicial: R$ %.2f\n", nome, saldo);
 
